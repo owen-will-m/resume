@@ -1,0 +1,36 @@
+.Resume{
+  height:100%;
+  width:50vw;
+display: flex;
+flex-direction: column;
+align-items: left;
+text-align: left;
+}
+.Resume h2{
+  margin-bottom:3vw;
+}
+.titleButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height:40px;
+  margin-bottom: 3vw;
+}
+.resume-screenshot{
+  background-color: lightgray;
+  width:50vw;
+  height:65vw;
+  margin-bottom: 3vw;
+}
+.Resume button{
+  border-radius: 10px;
+  width:100px;
+  font-family: Montserrat;
+  font-weight:700;
+  color:white;
+  background-color: #428672;
+  border-color: transparent;
+}
+button:hover{
+  cursor:pointer;
+}

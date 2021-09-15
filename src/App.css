@@ -19,21 +19,13 @@
 
 .header {
   background-color: #f2eee6;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  /* font-size: calc(10px + 2vmin); */
   height: var(--header-height);
 }
-.title{
-  font-weight: 300;
-  font-size: 14pt;
-  line-height: 30px;
-  padding-top:20px;
 
-}
 .header h2 {
   font-weight: 500;
   font-size: 25pt;
@@ -63,8 +55,12 @@
 
 .header .title {
   text-align: left;
-  margin-left: 10%;
+  margin-left: 8vw;
   margin-top: 20px;
+  font-weight: 300;
+  font-size: 14pt;
+  line-height: 30px;
+  padding-top: 20px;
 }
 
 .header .image2 {
@@ -81,20 +77,35 @@
 }
 
 .sidebar {
-  width: var(--header-height);
+  flex: 0 0 180px;
   margin-left: 10%;
 }
 
 .item {
   height: 20px;
+  width: 50%;
   margin-top: 30px;
   text-align: left;
+  font-size: 11pt;
+  font-weight: 450;
+}
+
+.item:hover {
+  font-weight: 600 !important;
+  cursor: pointer;
 }
 
 .window {
-  border: solid black 2px;
-  flex-grow: 1;
+  flex-grow: 0;
   margin-right: 10%;
+  margin-left: 8vw;
+  font-size: 11pt;
+font-weight: 300;
+
+}
+.window h2{
+  font-size: 11pt;
+
 }
 
 .body {
@@ -103,17 +114,4 @@
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

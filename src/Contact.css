@@ -1,0 +1,27 @@
+:root {
+  --header-height: 180px;
+}
+
+.Contact{
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  text-align: left;
+  line-height: 40px;
+  font-size: 11pt;
+
+}
+.col1{
+width: 200px;
+font-weight:700;
+}
+
+.col2{
+
+}
+
+span:hover{
+  font-weight:500 !important;
+  cursor:pointer;
+}

@@ -1,5 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
+import About from "./About.js";
+import Projects from "./Projects.js";
+import Resume from "./Resume.js";
+import Contact from "./Contact.js";
+import Spotlight from "./Spotlight.js";
 
 import img from "./assets/plants.png";
 import profile from "./assets/prof.png";
@@ -8,7 +12,34 @@ import React from "react";
 class App extends React.Component {
   constructor(props) {
     super(props);
-this.state = { activePage: "About"};
+
+    let about = (this.state = {
+      active: 1,
+      activeStyle: { "font-weight": "700" },
+      inactiveStyle: { "font-weight": "500" },
+      spot : {name: "demo"}
+    });
+  }
+
+  isActive(n) {
+    return this.state.active == n;
+  }
+
+  showOrHide(n) {
+    return this.isActive(n) ? { hidden: "false" } : { hidden: "true" };
+  }
+
+  setActive(n) {
+    this.setState({ active: n });
+  }
+
+  getStyle(n) {
+    return this.isActive(n) ? this.state.activeStyle : this.state.inactiveStyle;
+  }
+
+  openSpotlight(n){
+    this.setActive(5);
+    this.setState({spot:{name:n}});
   }
 
   render() {
@@ -16,11 +47,13 @@ this.state = { activePage: "About"};
       <div className="App">
         <div className="header">
           <div className="subheader">
-            <div className="image"> <img src={profile}></img></div>
+            <div className="image">
+              {" "}
+              <img src={profile}></img>
+            </div>
             <div className="title">
-              <h2>Will Owen {this.x} </h2>
-                UX Designer / Web Developer<br></br>Providence, RI
-
+              <h2>Will Owen</h2>
+              UX Designer / Web Developer<br></br>Providence, RI
             </div>
             <div className="image2">
               <img src={img}></img>
@@ -31,12 +64,44 @@ this.state = { activePage: "About"};
 
         <div className="body">
           <div className="sidebar">
-            <div className="item" onclick={function(){alert();}}>About</div>
-            <div className="item">Projects</div>
-            <div className="item">Resume</div>
-            <div className="item">Contact</div>
+            <div
+              className="item"
+              onClick={() => this.setActive(1)}
+              style={this.getStyle(1)}
+            >
+              About
+            </div>
+            <div
+              className="item"
+              onClick={() => this.setActive(2)}
+              style={this.getStyle(2)}
+            >
+              Projects
+            </div>
+            <div
+              className="item"
+              onClick={() => this.setActive(3)}
+              style={this.getStyle(3)}
+            >
+              Resume
+            </div>
+            <div
+              className="item"
+              onClick={() => this.setActive(4)}
+              style={this.getStyle(4)}
+            >
+              Contact
+            </div>
           </div>
-          <div className="window"></div>
+          <div className="window">
+            {this.isActive(1)? <About/> : null}
+            {this.isActive(2)? <Projects open={this.openSpotlight.bind(this)}/> : null}
+            {this.isActive(3)? <Resume/> : null}
+            {this.isActive(4)? <Contact/> : null}
+            {this.isActive(5)? <Spotlight /> : null}
+
+
+          </div>
         </div>
       </div>
     );

@@ -1,0 +1,40 @@
+.Projects{
+  width:100%;
+  height:100%;
+  text-align: left;
+}
+
+.Projects h2{
+  margin-bottom: 40px;
+
+}
+
+.Projects .row2{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vw;
+}
+
+.Projects .row2:hover{
+    cursor: pointer;
+
+}
+
+.img-container{
+  max-width:300px;
+
+}
+
+.row2 img {
+width:18vw;
+height:12vw;
+margin-right:2vw;
+background-color: lightgray;
+}
+
+.row2 p {
+  margin-top:0;
+}
+b{
+  font-weight: 450;
+}
