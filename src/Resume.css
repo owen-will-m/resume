@@ -22,7 +22,8 @@ text-align: left;
   height:65vw;
   margin-bottom: 3vw;
 }
-.Resume button{
+
+button{
   border-radius: 10px;
   width:100px;
   font-family: Montserrat;

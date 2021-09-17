@@ -21,7 +21,7 @@ font-weight:700;
 
 }
 
-span:hover{
+.Contact span:hover{
   font-weight:500 !important;
   cursor:pointer;
 }

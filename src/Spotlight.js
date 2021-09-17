@@ -1,7 +1,8 @@
 import "./Spotlight.css";
 import React from "react";
-
-
+import one from "./assets/RIDLT/1.png";
+import two from "./assets/RIDLT/2.png";
+import three from "./assets/RIDLT/3.png";
 
 class Spotlight extends React.Component {
   constructor(props) {
@@ -12,28 +13,32 @@ class Spotlight extends React.Component {
     return (
       <div className="Spotlight">
         <div className="bio">
-          <h2>Rhode Island Unemployment Insurance Redesign</h2>
-
-          
+          <span className="title-button">
+            <h2>Rhode Island Unemployment Insurance Redesign</h2>
+            <a onClick={() => this.props.open(2)}>
+              <u>Back to Projects</u>
+            </a>
+          </span>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            vehicula quam in eros auctor, et lobortis velit egestas. Morbi lorem
-            orci, dapibus sit amet purus sit amet, cursus malesuada libero.
-            Donec vel rhoncus neque. Duis nec finibus massa, vel porta lacus.
-            Suspendisse vitae massa lacinia, luctus lectus in, vestibulum justo.
-            Sed venenatis, nisi ac consequat pharetra, sapien ex malesuada nibh,
-            sed sodales lectus nibh in ante. Nunc sed malesuada ante, mattis
-            cursus turpis. Sed viverra eu augue et egestas. Donec tempor a dolor
-            aliquet dictum. Cras ornare ex a lorem placerat, quis tincidunt
-            massa elementum. Duis finibus, tortor eget facilisis imperdiet,
-            sapien nisi fermentum velit, sit amet hendrerit tellus dui in augue.
-            In arcu diam, pellentesque ac vestibulum in, pretium eget odio.
+            In the wake of the COVID-19 pandemic and ensuing economic crisis,
+            state unemployment websites across the country were being inundated
+            with thousands of additional unemployment claims. The Rhode Island
+            Department of Labor and Training’s (RIDLT) website was no exception.
+            In partnership with Amazon Web Services (AWS), We reimagined their
+            20-year-old unemployment system, saving it from failure. We worked
+            to lower call center volume, increase the speed of benefits
+            delivery, and increase overall customer satisfaction. RIDLT was
+            ecstatic with our timely and high-quality designs.
           </p>
           <br></br>
+          <div className="container">
+            <img src={one}></img>
+            <img src={two}></img>
+            <img src={three}></img>
+          </div>
         </div>
-
-        </div>
+      </div>
     );
   }
 }

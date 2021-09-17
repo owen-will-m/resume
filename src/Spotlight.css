@@ -1,6 +1,5 @@
 :root {
   --header-height: 180px;
-
 }
 
 .Spotlight {
@@ -9,6 +8,40 @@
   text-align: left;
   /* max-width: calc(100% - 180px); */
 }
-.Spotlight h2{
-margin-bottom: 40px;
+.Spotlight h2 {
+  margin-bottom: 40px;
+}
+
+.Spotlight img {
+  width: 800px;
+  margin: 25px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+  /* z-index: 0; */
+}
+.fullscreen {
+  position: absolute;
+  height: 100vh;
+  z-index: 30;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }

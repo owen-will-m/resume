@@ -23,9 +23,18 @@ margin-bottom: 40px;
 }
 .row img {
 width:8vw;
+height:8vw;
 margin-right:2vw;
 }
 
 .row p {
   margin-top:0;
+  width:90%;
+}
+
+.bullets{
+  line-height: 28px;
+}
+.float{
+  float:right;
 }

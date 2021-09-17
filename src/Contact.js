@@ -1,5 +1,6 @@
 import "./Contact.css";
 import React from "react";
+import { ToastContainer, toast } from 'react-toast'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Contact extends React.Component {
               navigator.clipboard.writeText("owen.will.m@gmail.com");
             }}
           >
-            owen.will.m@gmail.com - copy to clipboard <br></br>{" "}
+            <span onClick={()=>toast.info("copied to clipboard")}>owen.will.m@gmail.com<br></br></span>
           </span>
 
           <a

@@ -4,6 +4,10 @@ import Projects from "./Projects.js";
 import Resume from "./Resume.js";
 import Contact from "./Contact.js";
 import Spotlight from "./Spotlight.js";
+import Spotlight2 from "./Spotlight2.js";
+import Processing from "./Processing.js";
+import { ToastContainer, toast } from 'react-toast'
+
 
 import img from "./assets/plants.png";
 import profile from "./assets/prof.png";
@@ -38,13 +42,13 @@ class App extends React.Component {
   }
 
   openSpotlight(n){
-    this.setActive(5);
-    this.setState({spot:{name:n}});
+    this.setActive(n);
   }
 
   render() {
     return (
-      <div className="App">
+      <div className="App" stlye={{"overflow":"hidden","height":"10px","margin":"0"}}>
+        <ToastContainer delay={3000} position="bottom-center"/>
         <div className="header">
           <div className="subheader">
             <div className="image">
@@ -98,7 +102,10 @@ class App extends React.Component {
             {this.isActive(2)? <Projects open={this.openSpotlight.bind(this)}/> : null}
             {this.isActive(3)? <Resume/> : null}
             {this.isActive(4)? <Contact/> : null}
-            {this.isActive(5)? <Spotlight /> : null}
+            {this.isActive(5)? <Spotlight open={this.openSpotlight.bind(this)}/> : null}
+            {this.isActive(6)? <Spotlight2 open={this.openSpotlight.bind(this)}/> : null}
+            {this.isActive(7)? <Processing open={this.openSpotlight.bind(this)}/> : null}
+
 
 
           </div>

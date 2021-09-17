@@ -38,3 +38,12 @@ background-color: lightgray;
 b{
   font-weight: 450;
 }
+.title-button{
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.backbutton{
+  background-color: #DD5250 !important;
+  height:40px;
+}
